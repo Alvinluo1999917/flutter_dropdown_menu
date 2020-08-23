@@ -47,7 +47,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
   Widget buildItem(
       BuildContext context, dynamic title, bool selected, int index) {
     final Color primaryColor = Color(0xff000000);
-    final Color unselectedColor = Color(0xff000000);
+    final Color unselectedColor = Colors.yellow;
     final GetItemLabel getItemLabel = widget.getItemLabel;
 
     return new GestureDetector(
