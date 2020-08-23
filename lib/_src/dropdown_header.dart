@@ -116,9 +116,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
     }).toList();
 
     final Decoration decoration = new BoxDecoration(
-      border: new Border(
-        bottom: Divider.createBorderSide(context),
-      ),
+      
     );
 
     return new DecoratedBox(
