@@ -55,6 +55,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
       child: new Padding(
           padding: new EdgeInsets.fromLTRB(0.0, 0.0, 0.0, 0.0),
           child: new DecoratedBox(
+              decoration:new BoxDecoration(),
               child: new Center(
                   child: new Row(
                       mainAxisSize: MainAxisSize.min,
@@ -119,6 +120,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
     );
 
     return new DecoratedBox(
+      decoration:decoration,
       child: new SizedBox(
           child: new Row(
             children: list,
