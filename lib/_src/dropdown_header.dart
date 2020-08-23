@@ -46,8 +46,8 @@ class DropdownHeader extends DropdownWidget {
 class _DropdownHeaderState extends DropdownState<DropdownHeader> {
   Widget buildItem(
       BuildContext context, dynamic title, bool selected, int index) {
-    final Color primaryColor = Colors.red;
-    final Color unselectedColor = Theme.of(context).unselectedWidgetColor;
+    final Color primaryColor = Color(0xff000000);
+    final Color unselectedColor = Color(0xff000000);
     final GetItemLabel getItemLabel = widget.getItemLabel;
 
     return new GestureDetector(
@@ -55,23 +55,21 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
       child: new Padding(
           padding: new EdgeInsets.fromLTRB(0.0, 10.0, 0.0, 10.0),
           child: new DecoratedBox(
-              decoration: new BoxDecoration(
-                  border: new Border(left: Divider.createBorderSide(context))),
               child: new Center(
                   child: new Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
-                    new Text(
-                      getItemLabel(title),
-                      style: new TextStyle(
-                        color: selected ? primaryColor : unselectedColor,
-                      ),
-                    ),
-                    new Icon(
-                      selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
-                      color: selected ? primaryColor : unselectedColor,
-                    )
-                  ])))),
+                new Text(
+                  getItemLabel(title),
+                  style: new TextStyle(
+                    color: selected ? primaryColor : unselectedColor,
+                  ),
+                ),
+                new Icon(
+                  selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
+                  color: selected ? primaryColor : unselectedColor,
+                )
+              ])))),
       onTap: () {
         if (widget.onTap != null) {
           widget.onTap(index);
@@ -121,7 +119,6 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
     );
 
     return new DecoratedBox(
-      decoration: decoration,
       child: new SizedBox(
           child: new Row(
             children: list,
