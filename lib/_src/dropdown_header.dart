@@ -73,6 +73,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
                 new Icon(
                   selected ? Icons.arrow_drop_up : Icons.arrow_drop_down,
                   color: selected ? primaryColor : unselectedColor,
+                  size:11.0,
                 )
               ])))),
       onTap: () {
