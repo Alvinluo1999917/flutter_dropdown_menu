@@ -58,7 +58,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
               decoration: new BoxDecoration(
                   ),
 //             border: new Border(left: Divider.createBorderSide(context))
-              child: new Center(
+              
                   child: new Row(
                       mainAxisSize: MainAxisSize.min,
                       children: <Widget>[
@@ -75,7 +75,7 @@ class _DropdownHeaderState extends DropdownState<DropdownHeader> {
                   color: selected ? primaryColor : unselectedColor,
                   size:11.0,
                 )
-              ])))),
+              ]))),
       onTap: () {
         if (widget.onTap != null) {
           widget.onTap(index);
